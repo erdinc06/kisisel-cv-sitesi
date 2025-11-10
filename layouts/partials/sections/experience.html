@@ -1,0 +1,51 @@
+{{ $experience_section := .Site.Params.experience }}
+{{ if $experience_section.enable | default false }}
+<section id="experience" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ $experience_section.title | default "İş Deneyimlerim" }}</h3>
+        <div class="row justify-content-center pt-3">
+            <div class="col-lg-8">
+                {{/* --- AKORDİYON BAŞLANGICI --- */}}
+                <div class="accordion" id="experienceAccordion">
+                    {{ range $index, $exp := $experience_section.items }}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingExp{{ $index }}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExp{{ $index }}" aria-expanded="false" aria-controls="collapseExp{{ $index }}">
+                                {{/* Başlıkta Şirket Adı ve Pozisyon görünsün */}}
+                                <strong>{{ $exp.company }}</strong>{{ with $exp.job }} - {{ . }}{{ end }}
+                            </button>
+                        </h2>
+                        <div id="collapseExp{{ $index }}" class="accordion-collapse collapse" aria-labelledby="headingExp{{ $index }}" data-bs-parent="#experienceAccordion">
+                            <div class="accordion-body">
+                                {{/* Açılan içerik */}}
+                                {{ with $exp.date }}<p class="mb-2"><small class="text-muted">{{ . }}</small></p>{{ end }}
+                                
+                                {{/* Maddeler (content) */}}
+                                {{ $exp.content | markdownify }}
+
+                                {{/* Detaylı Açıklama (info.content) */}}
+                                {{ with $exp.info.content }}
+                                <p class="experience-info text-muted small mt-3 mb-0">
+                                    {{ . }}
+                                </p>
+                                {{ end }}
+                                
+                                {{/* Varsa öne çıkan link */}}
+                                {{ if $exp.featuredLink.enable }}
+                                <div class="mt-3">
+                                    <a href="{{ $exp.featuredLink.url | absURL }}" class="btn btn-sm btn-outline-primary" target="_blank">
+                                        {{ $exp.featuredLink.name | default "Detay" }}
+                                    </a>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }} {{/* range döngüsünün sonu */}}
+                </div>
+                {{/* --- AKORDİYON BİTİŞİ --- */}}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

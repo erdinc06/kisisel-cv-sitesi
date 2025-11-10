@@ -1,0 +1,321 @@
+# --- TEMEL HUGO AYARLARI ---
+baseURL = "https://www.erdincdincli.com/"
+theme = "profile"
+defaultContentLanguage = "tr"
+
+# --- DİL TANIMLAMALARI ---
+[languages]
+
+  # 1. TÜRKÇE DİL AYARLARI
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr-tr"
+    weight = 1
+    title = "Erdinç Dincli"
+
+    [languages.tr.params]
+      favicon = "/logo.png"
+      description = "Chef Erdinç Dinçli'nin yeteneklerini ve deneyimlerini sergilediği kişisel CV sitesi. 5 yıldızlı otel mutfaklarına uzanan kariyerimi inceleyin."
+      [languages.tr.params.social]
+        email = "Erdinc.dincli@hotmail.com"
+      [languages.tr.params.theme]
+        disableThemeToggle = false
+      [languages.tr.params.color]
+        primaryColor = "#212529"
+        backgroundColor = "#ffffff"
+        textColor = "#212529"
+        secondaryTextColor = "#6c757d"
+        textLinkColor = "#212529"
+        borderColor = "#dee2e6"
+      [languages.tr.params.navbar]
+        align = "mx-auto"
+        disableSearch = true
+        brandLogo = "/logo.png"
+        brandname = ""
+      [languages.tr.params.font]
+        fontSize = "1rem"
+        fontWeight = "700"
+        lineHeight = "1.6"
+      [languages.tr.params.hero]
+        enable = true
+        intro = "Merhaba, ben"
+        title = "Erdinç Dinçli"
+        content = """Yeteneklerimi ve deneyimlerimi sergilediğim kişisel CV siteme hoş geldiniz. 
+        Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi edinebilirsiniz."""
+        image = "images/ben_karsilama.jpg"
+        roundImage = false
+        [languages.tr.params.hero.button]
+          enable = true
+          name = "CV'mi Görüntüle"
+          url = "/erdinc_dincli_cv.pdf"
+          newPage = true
+          download = false
+        [languages.tr.params.hero.socialLinks]
+          [[languages.tr.params.hero.socialLinks.fontAwesomeIcons]]
+            url = "https://www.instagram.com/erdinc.dincli"
+            icon = "fab fa-instagram"
+          [[languages.tr.params.hero.socialLinks.fontAwesomeIcons]]
+            url = "mailto:Erdinc.dincli@hotmail.com"
+            icon = "fas fa-envelope"
+      [languages.tr.params.about]
+        enable = true
+        title = "Hakkımda"
+        content = """
+Aileden  gelen köklü gastronomi sevgisi ve disiplini ile büyümüş 2006 yılından itibaren profesyonel olarak mutfak hayatı maceram başlamıştır. Chef Dinçli Çeşitli lüx Restaurant’larda ve farklı ülkelerde 5 yıldızlı otel mutfaklarına uzanan bir kariyere sahibimdir. Mutfakta yarattığım lezzetlerle sadece damaklara değil, kalplere de dokunan bir isim haline gelmekteyim
+Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dönüşmüştür. Yerel tatlara duyduğum saygı ve modern mutfak tekniklerine olan ilgim, klasik tarifleri günümüz mutfağına yeniden yorumlayan ve dizayn eden bir Şef kişiliğine sahibimdir. Her tabağımda  yalnızca  damaklara değil, hafızalara da dokunan tatlar yaratırken, mutfağın  bir üretim alanı olmaktan öte, bir sanat atölyesi olarak görüyorum, benim  için mutfak, sınırların kalktığı, yaratıcılığın özgürleştiği bir sahnedir. Chef Dinçli olarak sadece yemek yapan bir şef değil; aynı zamanda misafir memnuniyetini en değerli Reçete olarak kabul ediyorum; Bugün ise 5 yıldızlı otellerde Chef’lik kariyerimi sürdürerek, mutfak sanatındaki kariyer yolculuğuma yeni başarılarıma her geçen zaman zarfı içinde  bir yenisini ekleyerek devam etmekteyim
+        """
+      [languages.tr.params.experience]
+        enable = true
+        title = "İş Deneyimlerim"
+        [[languages.tr.params.experience.items]]
+          company = "Sheraton Ankara Hotel & Conventıon Center"
+          date = "Mayıs 2007 - Mayıs 2008"
+          content = "Pozisyon : Stajyer"
+          info = { content = "19.05.2007 Sheraton Ankara Hotel & Conventıon Center da Mayıs 2008 tarihine kadar aktif Staj görevimi tamamladım.Chef Zeki Açıköz Önderliğinde mutfak kültürünü altyapısını, ekipmanlar, ve mutfak vizyonu, misafir portföyü hakkında bilgi sahibi olup gelişmemde çok böyük katkı sağlamıştır aktif staj süremi başarılı bir şekilde bitirmiş bulunmaktayım " }
+        [[languages.tr.params.experience.items]]
+          company = "PARK FORA RESTAURANT ANKARA"
+          date = "Mayıs 2008 - Eylül 2008"
+          content = "Pozisyon: A’la Carte Commis"
+          info = { content = "Günlük 80 İla 110 Misafir Portföyü Olan Dönemin Ankara’da Faliyet Gösteren Bakanların Ve İş İnsanlarını Ağırlandığı Balık Restoranda görev almaktaydım"}
+     [[languages.tr.params.experience.items]]
+          company = "LIMAK AMBASSADOR HOTEL ANKARA"
+          date = "Eylül 2008 - Ekim 2009"
+          content = "Pozisyon: A’la Carte Commis"
+          info = { content = "Mutfak Commis Olarak Görev Almakta olduğum Limak Ambassador A’la Carte Commis ve Soğuk Bölümünde Görev Aldım"}
+    [[languages.tr.params.experience.items]]
+          company = "PARK BULVAR RESTAURANT & CAFE ANKARA"
+          date = "Aralık 2009 - Haziran 2010"
+          content = "Pozisyon: Demi Chef"
+          info = { content = "O dönemki Ankara Piyasasında İsim Yapmış A’la Carte ’de günlük 220 ila 300 kişi misafir portföyü olan Sunum, görsel, Tat İle isminden Söz ettiren Restaurant da Demi Chef olarak görev aldım Dünya mutfağına önem veren kullanılmakta olan tüm ürünleri Fresh servis edilen bilgi, beceri ve görsel açıdan Misafir portföyü ve memnuniyeti üst düzey mekanda görev almaktaydım"}
+     [[languages.tr.params.experience.items]]
+          company = "CRATOS PREMIUM HOTEL & CASINO & PORT & SPA"
+          date = "Temmuz 2010 - Mayıs 2011"
+          content = "Pozisyon: A’la Carte Demi Chef"
+          info = { content = " Günlük 100 ile 120 arası değişen sayılarda misafir ağırlayan İspanyol mutfağında Mr. Paella markası İle Chef Fabrice Canelle ile çalışmaktaydım"}
+               [[languages.tr.params.experience.items]]
+          company = "GOLDEN TULIP HOTEL & CASINO KIBRIS "
+          date = "Ocak 2011 - Aralık 2012"
+          content = "Pozisyon: Ass. A’la Carte Chef De Party"
+           info = { content = "Mutfak departmanına ait menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar, mal kabul, mc programı"} 
+               [[languages.tr.params.experience.items]]
+          company = "RADISSON BLU AL-MAHARY HOTEL TRIPOLI / LIBYA "
+          date = "Aralık 2012 - Haziran 2013"
+          content = "Pozisyon: A’la Carte Chef De Party"
+          info = { content = "Günlük 80-110 kuver misafir ağırlayan restoranın kısım şefi olarak görev yaptım. Menü çalışmaları, reçete çalışmaları, satın alma departmanı aracılığıyla kontak firmalardan taze balık ve et alım ve kontrolü, sürekli gelişen ve geliştiren bir tutum ile ekip çalışmaları ve eğitimleri."}
+      [[languages.tr.params.experience.items]]
+          company = "GRAND PASHA LEFKOŞA HOTEL & CASINO KIBRIS"
+          date = "Temmuz 2013 - Ocak 2018"
+          content = "Pozisyon: Jr.Sous chef"
+          info = { content = "  Mutfak departmanına ait menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar, mal kabul, mc programı üzerinden satın alma malzeme talepleri ve giriş çıkışlar, personel eğitimleri, gıda güvenliği ve sağlanması üzerine kalite departmanıyla kontak çalışmalar ve personel eğitimleri, üçüncü bir göz olan deversey denetim kontrolleri, kontak departman olan muhasebe satın alma f&b teknik ile ortak çalışmalar. 2013 Yılında A’la Carte Chef De Party Olarak Görev Aldım 2014 Aralık Ayında Chef Tournant Chef Görevine Terfi Aldım 2017 Ocak Ayında Jr. Sous Chef Olarak terfi aldım Görevime Devam Ettim "}
+[[languages.tr.params.experience.items]]
+          company = "ELEXUS HOTEL & SPA & CASINO KIBRIS"
+          date = "Ocak 2018 - Mayıs 2024"
+          content = "Pozisyon: Sous Chef"
+          info = { content = " Genel mutfak menü çalışmaları, reçete çalışmaları, mc üzerinden satın alma malzeme talepleri ve giriş çıkışlar. Event order planlama aksiyon alımı ve tüketim planlaması. Personel eğitimleri, gıda güvenliğinin sağlanması açısından kalite departmanı ile kontak çalışma ve aksiyonlarının alınması. 2018 yılında başlamış olduğum Elexus Hotel & Casino da A’la Carte den Sorumlu Chef de Cuisine olarak göreve başladım 2020 Yılında Genel Sous Chef Olarak Terfi Alıp Görevime Devam Ettim"}
+            [[languages.tr.params.experience.items]]
+          company = "MERİT ROYAL PREMİUM HOTEL KIBRIS"
+          date = "Mayıs 2024- Aktif Çalışıyor"
+          content = "Pozisyon: Sous Chef"
+          info = { content = "Genel mutfaklarda menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar chetna programı üzerinden talep giriş çıkışları, personel eğitimleri, satın alma departmanı ile kontak çalışmalar, kalite departmanı ile kontak çalışmalar"}
+       [languages.tr.params.education] 
+        enable = true
+        title = "Eğitim Belgeleri/Kurs/Sertifika"
+        index = false
+        [[languages.tr.params.education.items]]
+          date = "03.03.2025"
+          title = "Gastronomi Eğitimi – Mudanya Üniversitesi Eğitim ve Araşt. Merkezi"
+        [[languages.tr.params.education.items]]
+          date = "10.02.2025"
+          title = "Executive Chef Eğitimi - Mudanya Üniversitesi Eğitim ve Araşt. Merkezi"
+        [[languages.tr.params.education.items]]
+          date = "28.12.2015"
+          title = "Usta Öğreticilik Belgesi - Ahi Evran Mesleki Eğitim Merkezi"
+        [[languages.tr.params.education.items]]
+          date = "30.06.2014"
+          title = "Ustalık Belgesi - Ahi Evran Mesleki Eğitim Merkezi "
+        [[languages.tr.params.education.items]]
+          date = "01.03.2012"
+          title = "Kalfalık Belgesi - Ahi Evran Mesleki Eğitim Merkezi "
+        [[languages.tr.params.education.items]]
+          date = "12.03.2017"
+          title = "Düşünsel Gelecek Tasarımı ve Başarı - Aşkım Kapışmak Eğitim Danış. "
+                  [[languages.tr.params.education.items]]
+          date = "12.03.2017"
+          title = "Problem Çözme Tekn. ve Düşünce Gücü - Aşkım Kapışmak Eğitim Danış. "
+                  [[languages.tr.params.education.items]]
+          date = "12.03.2017"
+          title = "İnsan Tanıma Yöntemleri ve Zihin - Aşkım Kapışmak Eğitim Danış."
+                  [[languages.tr.params.education.items]]
+          date = "06.05.2014"
+          title = "ISO 22000 Gıda Güvenliği Eğitimi – Golden Tulip Otel "
+                  [[languages.tr.params.education.items]]
+          date = "06.05.2011"
+          title = "SO 9001 – Temel Kalite Yönetimi Eğitimi – Golden Tulip Otel"
+
+      [languages.tr.params.contact]
+        enable = true
+        title = "İletişime Geçin"
+        content = "Bir proje hakkında konuşmak, bir soru sormak veya sadece merhaba demek isterseniz, aşağıdaki butona tıklayarak bana bir e-posta gönderebilirsiniz."
+        email = "erdinc.dincli@hotmail.com"
+        btnName = "E-posta Gönder"
+        [languages.tr.params.contact.formspree]
+          enable = false
+
+  # 2. İNGİLİZCE DİL AYARLARI
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 2
+    title = "Erdinç Dincli" # Sitenin İngilizce başlığı
+
+    [languages.en.params]
+      favicon = "/logo.png"
+      description = "Chef Erdinç Dinçli's personal CV site, showcasing his talents and experience. Check out my career that extends to 5-star hotel kitchens."
+      [languages.en.params.social]
+        email = "Erdinc.dincli@hotmail.com"
+      [languages.en.params.theme]
+        disableThemeToggle = false
+      [languages.en.params.color]
+        primaryColor = "#212529"
+        backgroundColor = "#ffffff"
+        textColor = "#212529"
+      [languages.en.params.navbar]
+        align = "mx-auto"
+        disableSearch = true
+        brandLogo = "/logo.png"
+        brandName = ""
+      [languages.en.params.font]
+        fontSize = "1rem"
+        fontWeight = "700"
+        lineHeight = "1.6"
+
+      [languages.en.params.hero]
+        enable = true
+        intro = "Hello, I am"
+        title = "Erdinç Dinçli"
+        content = "Hello! Welcome to my personal CV, where I showcase my skills and experience. You can learn more about me by browsing through my projects and reviewing my resume."
+        image = "images/ben_karsilama.jpg"
+        roundImage = false
+        [languages.en.params.hero.button]
+          enable = true
+          name = "View CV"
+          url = "/erdinc_dincli_cv.pdf" # Erdinç Bey'in CV'si ile güncellenmeli
+          newPage = true
+          download = false
+        [languages.en.params.hero.socialLinks]
+          [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+            url = "https://www.instagram.com/erdinc.dincli"
+            icon = "fab fa-instagram"
+          [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+            url = "mailto:erdinc.dincli@hotmail.com"
+            icon = "fas fa-envelope"
+
+      [languages.en.params.about]
+        enable = true
+        title = "About Me"
+        content = """
+Chef Erdinç Dinçli grew up with a deep-rooted love and discipline for gastronomy passed down through his family, starting his professional kitchen adventure in 2006. Chef Dinçli has a career spanning luxury restaurants and 5-star hotel kitchens in different countries. With the flavors created in the kitchen, he is becoming a name that touches not just palates but also hearts.
+My interest in cooking, which started at a young age, transformed into a professional identity over time. My respect for local tastes and interest in modern culinary techniques have shaped me into a Chef who reinterprets and designs classic recipes for today's cuisine. In every dish, I create flavors that touch not only the palate but also memories, seeing the kitchen not just as a production area, but as an art workshop. For me, the kitchen is a stage where boundaries disappear and creativity is liberated. As Chef Dinçli, I am not just a chef who cooks; I also consider guest satisfaction the most valuable recipe. Today, I continue my Chef career in 5-star hotels, adding new successes to my culinary journey with each passing moment.
+        """
+
+      [languages.en.params.experience]
+        enable = true
+        title = "Work Experience"
+        [[languages.en.params.experience.items]]
+          company = "Sheraton Ankara Hotel & Convention Center"
+          date = "May 2007 - May 2008"
+          content = "Position: Intern"
+          info = { content = "I completed my active internship duty at Sheraton Ankara Hotel & Convention Center from 19.05.2007 to May 2008. Under the guidance of Chef Zeki Açıköz, I gained knowledge about the infrastructure of culinary culture, equipment, kitchen vision, and guest portfolio, which greatly contributed to my development. I successfully completed my active internship period." }
+        [[languages.en.params.experience.items]]
+          company = "PARK FORA RESTAURANT ANKARA"
+          date = "May 2008 - September 2008"
+          content = "Position: A’la Carte Commis"
+          info = { content = "I worked in a Fish Restaurant that hosted Ministers and Business People operating in Ankara at the time, with a daily guest portfolio of 80 to 110." }
+        [[languages.en.params.experience.items]]
+          company = "LIMAK AMBASSADOR HOTEL ANKARA"
+          date = "September 2008 - October 2009"
+          content = "Position: A’la Carte Commis"
+          info = { content = "I served as a Kitchen Commis at Limak Ambassador, working in the A’la Carte Commis and Cold sections." }
+        [[languages.en.params.experience.items]]
+          company = "PARK BULVAR RESTAURANT & CAFE ANKARA"
+          date = "December 2009 - June 2010"
+          content = "Position: Demi Chef"
+          info = { content = "I worked as a Demi Chef in a renowned A’la Carte restaurant in Ankara at that time, with a daily guest portfolio of 220 to 300 people, known for its presentation, visual appeal, and taste. I served in a venue that emphasized world cuisine, used all fresh products, and had a high level of guest portfolio and satisfaction in terms of knowledge, skills, and visuals." }
+        [[languages.en.params.experience.items]]
+          company = "CRATOS PREMIUM HOTEL & CASINO & PORT & SPA"
+          date = "July 2010 - May 2011"
+          content = "Position: A’la Carte Demi Chef"
+          info = { content = "I worked with Chef Fabrice Canelle under the Mr. Paella brand in the Spanish cuisine section, serving between 100 and 120 guests daily." }
+        [[languages.en.params.experience.items]]
+          company = "GOLDEN TULIP HOTEL & CASINO CYPRUS"
+          date = "January 2011 - December 2012"
+          content = "Position: Ass. A’la Carte Chef De Partie"
+          info = { content = "Responsibilities included menu planning, recipe development, capex and opex studies, contacting suppliers, goods receiving, and using the MC program for the kitchen department." }
+        [[languages.en.params.experience.items]]
+          company = "RADISSON BLU AL-MAHARY HOTEL TRIPOLI / LIBYA"
+          date = "December 2012 - June 2013"
+          content = "Position: A’la Carte Chef De Partie"
+          info = { content = "I served as the section chef in a restaurant hosting 80-110 guests daily. Responsibilities included menu planning, recipe development, procurement and control of fresh fish and meat through the purchasing department, and conducting team work and training with a continuous development mindset." }
+        [[languages.en.params.experience.items]]
+          company = "GRAND PASHA NICOSIA HOTEL & CASINO CYPRUS"
+          date = "July 2013 - January 2018"
+          content = "Position: Jr. Sous Chef"
+          info = { content = "Responsibilities included menu planning, recipe development, capex and opex studies, contacting suppliers, goods receiving, material requisitions and inventory management via MC program, staff training, coordinating with the quality department on food safety and implementation, third-party audits (Diversey), and collaborating with accounting, purchasing, F&B, and technical departments. Started as A’la Carte Chef De Partie in 2013, promoted to Chef Tournant in December 2014, and promoted to Jr. Sous Chef in January 2017." }
+        [[languages.en.params.experience.items]]
+          company = "ELEXUS HOTEL & SPA & CASINO CYPRUS"
+          date = "January 2018 - May 2024"
+          content = "Position: Sous Chef"
+          info = { content = "Responsibilities included general kitchen menu planning, recipe development, material requisitions and inventory via MC. Planning and executing event orders and consumption plans. Staff training, coordinating with the quality department for food safety actions. Started at Elexus Hotel & Casino in 2018 as Chef de Cuisine responsible for A’la Carte, promoted to General Sous Chef in 2020." }
+        [[languages.en.params.experience.items]]
+          company = "MERIT ROYAL PREMIUM HOTEL CYPRUS"
+          date = "May 2024 - Present"
+          content = "Position: Sous Chef"
+          info = { content = "Responsibilities include menu planning for general kitchens, recipe development, capex and opex studies, contacting suppliers, managing requisitions via Chetna program, staff training, coordinating with purchasing and quality departments." }
+
+      [languages.en.params.education]
+        enable = true
+        title = "Education Documents/Courses/Certificates"
+        index = false
+        [[languages.en.params.education.items]]
+          date = "03.03.2025"
+          title = "Gastronomy Education – Mudanya University Education and Research Center"
+        [[languages.en.params.education.items]]
+          date = "10.02.2025"
+          title = "Executive Chef Training - Mudanya University Education and Research Center"
+        [[languages.en.params.education.items]]
+          date = "28.12.2015"
+          title = "Master Instructor Certificate - Ahi Evran Vocational Training Center"
+        [[languages.en.params.education.items]]
+          date = "30.06.2014"
+          title = "Mastery Certificate - Ahi Evran Vocational Training Center"
+        [[languages.en.params.education.items]]
+          date = "01.03.2012"
+          title = "Journeyman Certificate - Ahi Evran Vocational Training Center"
+        [[languages.en.params.education.items]]
+          date = "12.03.2017"
+          title = "Intellectual Future Design and Success - Aşkım Kapışmak Training Consultancy"
+        [[languages.en.params.education.items]]
+          date = "12.03.2017"
+          title = "Problem Solving Techniques and Power of Thought - Aşkım Kapışmak Training Consultancy"
+        [[languages.en.params.education.items]]
+          date = "12.03.2017"
+          title = "Methods of Understanding People and Mind - Aşkım Kapışmak Training Consultancy"
+        [[languages.en.params.education.items]]
+          date = "06.05.2014"
+          title = "ISO 22000 Food Safety Training – Golden Tulip Hotel"
+        [[languages.en.params.education.items]]
+          date = "06.05.2011"
+          title = "ISO 9001 – Basic Quality Management Training – Golden Tulip Hotel"
+
+      [languages.en.params.projects]
+        enable = false # Projeler bölümü şimdilik kapalı
+        title = "Projects"
+      
+      [languages.en.params.contact]
+        enable = true
+        title = "Get in Touch"
+        content = "If you want to talk about a project, ask a question, or just say hello, you can send me an email by clicking the button below."
+        email = "Erdinc.dincli@hotmail.com"
+        btnName = "Send E-mail"
+        [languages.en.params.contact.formspree]
+          enable = false

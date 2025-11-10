@@ -1,0 +1,394 @@
+/* =================================================================
+   BENİM ÖZEL STİL DOSYAM (custom.css)
+================================================================= */
+/* =================================================================
+   BENİM ÖZEL STİL DOSYAM (custom.css)
+================================================================= */
+
+/* --- YAZI TİPİ AİLESİ AYARLARI --- */
+
+/* --- YAZI TİPİ AİLESİ AYARLARI --- */
+
+/* Sitenin genel metinleri (paragraflar) için varsayılan font */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /* Normal kalınlık */
+}
+
+/* Tüm başlıklar (H1, H2, H3...) için varsayılan font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Kalın */
+}
+
+/* SADECE Hero bölümündeki ana başlık (H1) için özel font ataması */
+/* Bu kural daha spesifik olduğu için yukarıdaki genel h1 kuralını ezer */
+#hero h1 {
+  font-family: 'Parisienne', cursive;
+  font-size: 5rem; 
+  font-weight: 400; /* Fontun kendi normal kalınlığı */
+}
+
+/* --- BİTİŞ --- */
+
+/* --- RENK KURALLARI --- */
+
+/* Bölüm başlıklarının rengini değiştirmek için */
+#about h3,
+#experience h3, 
+#education h3, 
+#projects h3, 
+#contact h3 {
+  color: #212529 !important; /* Siyah/Koyu Gri */
+}
+
+/* Genel link rengi */
+a {
+  color: #212529  !important;/* Siyah/Koyu Gri */
+}
+
+/* Üzerine gelince link rengi */
+a:hover {
+  color: #000000 !important; /* Saf Siyah */
+}
+
+
+/* --- KENDİ ÖZEL BUTON STİLİMİZ --- */
+.btn-custom {
+  /* ... (diğer buton özellikleri aynı kalabilir) ... */
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 8px 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 50rem;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  
+  /* YENİ RENKLER */
+  color: #ffffff !important;            /* Yazı Rengi: Beyaz */
+  background-color: #212529 !important; /* Arkaplan: Siyah/Koyu Gri */
+  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Gölgeyi siyahın tonuna göre güncelledik */
+}
+
+/* Fareyle üzerine gelinceki hali */
+.btn-custom:hover {
+  color: #ffffff !important;
+  background-color: #000000 !important; /* Arkaplan: Saf Siyah */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+
+/* --- AÇILIR PENCERE (MODAL) STİL DÜZELTMELERİ --- */
+/* Bu kurallar zaten siyah metin rengi kullandığı için genellikle değişikliğe gerek yoktur, 
+ama tutarlılık için kontrol edebilirsiniz. */
+.modal-body {
+  color: #212529 !important;  
+}
+.modal-title {
+  color: #212529 !important;
+}
+
+/* --- KENDİ ÖZEL BUTON STİLİMİZ --- */
+.btn-custom {
+  /* Butonun genel görünümü */
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 8px 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 50rem; /* Oval görünüm */
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  /* Renkler */
+  color: #ffffff !important;
+  background-color: #212529 !important; /* Mavi arkaplan */
+  
+  /* Hafif bir gölge efekti */
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
+}
+
+/* Fareyle üzerine gelinceki hali */
+/* Fareyle üzerine gelinceki hali - GÜÇLENDİRİLMİŞ */
+.btn-custom:hover {
+  color: #ffffff !important;
+  background-color: #0b5ed7 !important; /* Biraz daha koyu mavi */
+
+  /* Gölgeyi daha büyük, yayvan ve belirgin yapalım */
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4); 
+
+  /* Yukarı kalkma efektini biraz artıralım */
+  transform: translateY(-3px); 
+}
+
+/* --- AÇILIR PENCERE (MODAL) STİL DÜZELTMELERİ --- */
+
+/* Modal ana metin rengi */
+.modal-body {
+  color: #212529 !important; /* Koyu, standart metin rengi */
+}
+
+/* Modal başlık rengi */
+.modal-title {
+  color: #212529 !important; /* Koyu, standart metin rengi */
+}
+/* Modal footer butonunun rengini KESİN OLARAK düzeltmek için */
+#projects .modal-footer a.btn-custom {
+    color: #FFFFFF !important; /* Yazı rengini BEYAZ yap */
+    background-color: #212529 !important; /* Arkaplan rengini MAVİ yap */
+}
+/* Hakkımda bölümünün yazı tipi stilini düzeltmek için */
+#about .content {
+  /* Yazı tipi ailesini sitenin geri kalanıyla aynı yapalım (eğer farklıysa) */
+  /* font-family: 'Lora', serif; */ /* Bu satırı isterseniz aktif edebilirsiniz */
+
+  /* Boyutunu, [params.font] içinde kullandığınız değere getirelim */
+  font-size: 1rem; /* hugo.toml'daki değerinizle aynı olmalı */
+
+  /* Satır aralığını da diğerleriyle uyumlu hale getirelim */
+  line-height: 1.6; /* hugo.toml'daki değerinizle aynı olmalı */
+}
+/* Hakkımda bölümündeki metnin stilini sitenin geneliyle uyumlu yap */
+#about .content pre {
+  /* Yazı tipi ailesini sitenin genel fontu olan Roboto yapalım */
+  font-family: 'Roboto', sans-serif;
+
+  /* Boyutunu, hugo.toml'da ayarladığımız genel metin boyutuyla aynı yapalım */
+  font-size: 1.1rem;
+
+  /* Satır aralığını da diğerleriyle uyumlu hale getirelim */
+  line-height: 1.6;
+
+  /* <pre> etiketinin istenmeyen varsayılan stillerini sıfırlayalım */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  white-space: pre-wrap; /* Uzun metinlerin aşağı kaymasını sağlar */
+  word-wrap: break-word;   /* Uzun kelimelerin taşmasını engeller */
+}
+/* Menü linklerinin üzerine gelince */
+#profileHeader .nav-link:hover {
+  /* Metnin etrafına, butonlarla uyumlu mavi bir parlama ekleyelim */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Mavi rengin gölgesi */
+
+  /* Linkin de hafifçe yukarı kalkmasını sağlayalım */
+  transform: translateY(-2px);
+}/* --- HERO BÖLÜMÜ BUTON VE İKONLARI İÇİN HOVER EFEKTİ --- */
+
+/* CV butonu ve sosyal ikonlara yumuşak bir geçiş efekti ekleyelim */
+#hero .btn,
+#hero .social-icon {
+  transition: all .2s ease-in-out;
+}
+
+/* CV butonu ve sosyal ikonların üzerine gelince */
+#hero .btn:hover,
+#hero .social-icon:hover {
+  /* Mavi parlama efekti */
+  /* Not: İkonların kendisi metin gibi davrandığı için text-shadow kullanıyoruz */
+  text-shadow: 0 0 10px rgba(13, 110, 253, 0.5); 
+
+  /* Hafifçe yukarı kalkma efekti */
+  transform: translateY(-2px);
+}
+/* Menüdeki linklerin (Dil değiştirici dahil) rengini düzeltme */
+#profileHeader .nav-link {
+  color: #212529 !important; /* Sitenin ana metin rengi (siyaha yakın gri) */
+}
+/* Karanlık mod aktifken menüdeki yazıların görünür olması için */
+body.dark #profileHeader .nav-link {
+    color: #FFFFFF !important; /* Yazı rengini beyaz yap */
+}
+/* --- YENİ ve DOĞRU AKORDİYON KOYU MOD DÜZELTMESİ --- */
+
+/* 1. ADIM: !important KURALINI EZMEK
+  Bu kural, sizin "color: #212529 !important" kuralınızdan daha spesifiktir
+  ve koyu modda onu ezer. Akordiyon başlıklarınız <h3> ise bu çözecektir.
+*/
+body.dark #experience h3 {
+    color: #e9ecef !important; /* Yazı rengini AÇIK GRİ yap (!important şart) */
+}
+
+/* 2. ADIM: BOOTSTRAP SINIFINI DÜZELTMEK
+  Eğer akordiyon başlığı <h3> değil de içindeki .accordion-button ise 
+  bu kural çalışacaktır. (Koyu mod sınıfını 'dark' olarak güncelledim)
+*/
+body.dark #experience .accordion-button {
+  color: #e9ecef !important; /* Yazı rengi (açık gri) - !important ekledim */
+  background-color: #343a40; 
+}
+
+/* Koyu modda, üzerine gelinen (hover) başlık */
+body.dark #experience .accordion-button:hover {
+  background-color: #495057;
+}
+
+/* Koyu modda, AÇIK olan akordiyon başlığının stilleri */
+body.dark #experience .accordion-button:not(.collapsed) {
+  color: #ffffff !important; /* Tam beyaz yazı - !important ekledim */
+  background-color: #495057; 
+}
+/* --- YENİ: MODERN MENÜ BARI STİLLERİ --- */
+
+/* 1. ADIM: Menü Barını Sayfanın Üstüne Sabitleme
+   (Eğer zaten sabit değilse, bu kod gereklidir. 
+    Sabitse, bu bloğu atlayabilirsiniz.)
+*/
+#profileHeader {
+  position: sticky; /* Sayfa kaysa bile üstte yapışık kalır */
+  top: 0;          /* En üste yapışır */
+  left: 0;
+  width: 100%;     /* Tüm ekran genişliğini kaplar */
+  z-index: 1000;   /* Diğer tüm öğelerin üstünde olmasını sağlar */
+  
+  /* Geçiş efekti (mod değiştirirken yumuşak olsun) */
+  transition: background-color 0.3s ease;
+}
+
+/* 2. ADIM: AÇIK MOD için "Buzlu Cam" Efekti */
+#profileHeader {
+  /* Yarı saydam beyaz arka plan */
+  background-color: rgba(255, 255, 255, 0.85); 
+  
+  /* Arkayı bulanıklaştıran "sihirli" kod */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari uyumluluğu için */
+  
+  /* Alta hafif bir gölge ekleyerek bardan ayırma */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* 3. ADIM: KOYU MOD için "Buzlu Cam" Efekti */
+body.dark #profileHeader {
+  /* Yarı saydam koyu gri arka plan */
+  background-color: rgba(40, 40, 40, 0.85); /* Koyu mod arka planından biraz açık */
+  
+  /* Koyu modda gölge daha az görünür, o yüzden hafifçe artırabiliriz */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}/* --- ÇÖZÜM: 'HERO' DAHİL TÜM BÖLÜMLERE DESEN EKLEME --- */
+/* Lütfen bir önceki 'background' kod bloğunu SİLİN. */
+
+/* 1. ADIM: AÇIK MOD
+   Tüm ana bölümlerin (Bu sefer 'hero' dahil)
+   arka planına YEREL desenimizi atıyoruz.
+*/
+#hero, /* <-- ANA GİRİŞ KISMI BURAYA EKLENDİ */
+#about,
+#experience,
+#education,
+#projects,
+#contact {
+  /* Yedek Renk, YEREL Resim URL'si ve Tekrar ayarı */
+  background: #f8f9fa url('../images/pattern.png') repeat !important;
+  
+  transition: background 0.3s ease;
+}
+
+/* 2. ADIM: KOYU MOD
+   Koyu modda deseni kaldırıp, sadece koyu bölüm rengini gösteriyoruz.
+*/
+body.dark #hero, /* <-- ANA GİRİŞ KISMI BURAYA EKLENDİ */
+body.dark #about,
+body.dark #experience,
+body.dark #education,
+body.dark #projects,
+body.dark #contact {
+  background: #2c2c2c !important; 
+}
+/* --- NİHAİ ÇÖZÜM (TÜM SAYFA: HEADER, CONTENT, FOOTER) --- */
+/* Lütfen bir önceki 'body #content *::selection' kod bloğunu SİLİN. */
+
+/* Temanın 'theme.css:2' kuralını, sitenin TÜM 
+   bölümleri (Header, Content, Footer) için daha 
+   spesifik kurallar yazarak eziyoruz.
+*/
+
+/* 1. ADIM: AÇIK MOD (Varsayılan) */
+body #profileHeader *::selection, /* Menü kısmı için */
+body #content *::selection,       /* Ana içerik (düzeltilmişti) */
+body footer *::selection          /* En alttaki footer yazısı için */
+{
+  background-color: #0d6efd !important; /* Mavi arka plan */
+  color: #ffffff !important;           /* Beyaz yazı */
+}
+
+body #profileHeader *::-moz-selection, /* Firefox - Menü */
+body #content *::-moz-selection,       /* Firefox - İçerik */
+body footer *::-moz-selection          /* Firefox - Footer */
+{ 
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+/* 2. ADIM: KOYU MOD */
+body.dark #profileHeader *::selection, /* Menü kısmı (Koyu Mod) */
+body.dark #content *::selection,       /* Ana içerik (Koyu Mod) */
+body.dark footer *::selection          /* Footer yazısı (Koyu Mod) */
+{
+  background-color: #555555 !important; /* Koyu gri arka plan */
+  color: #ffffff !important;           /* Beyaz yazı */
+}
+    
+body.dark #profileHeader *::-moz-selection, /* Firefox - Menü (Koyu) */
+body.dark #content *::-moz-selection,       /* Firefox - İçerik (Koyu) */
+body.dark footer *::-moz-selection          /* Firefox - Footer (Koyu) */
+{
+  background-color: #555555 !important;
+  color: #ffffff !important;
+}
+/* --- YENİ: YUMUŞAK KAYDIRMA (SMOOTH SCROLL) --- */
+/* Butonun yumuşak kaydırması için bu gereklidir */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- YENİ: YUKARI ÇIK BUTONU STİLLERİ --- */
+#yukariCikButonu {
+  display: none; /* Başlangıçta gizli */
+  position: fixed; /* Sayfa kaysa da sabit kalır */
+  bottom: 30px;
+  right: 30px;
+  z-index: 999; /* Diğer her şeyin üstünde */
+  
+  background-color: #212529; /* Ana koyu rengimiz */
+  color: #ffffff; /* Ok rengi (beyaz) */
+  border: none;
+  border-radius: 50%; /* Yuvarlak */
+  width: 50px; /* Genişlik */
+  height: 50px; /* Yükseklik */
+  
+  /* Ok ikonunu ortalamak için */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#yukariCikButonu:hover {
+  background-color: #000000; /* Hover rengi (daha koyu siyah) */
+}
+
+/* Koyu mod için buton renkleri */
+body.dark #yukariCikButonu {
+  background-color: #f8f9fa; /* Koyu modda açık renk */
+  color: #212529; /* Ok rengi (koyu) */
+}
+body.dark #yukariCikButonu:hover {
+  background-color: #ffffff; /* Koyu modda hover (daha parlak beyaz) */
+}
+

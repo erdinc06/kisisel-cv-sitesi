@@ -1,0 +1,93 @@
+{{- /* theme is auto */}}
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    switch (localStorageValue) {
+        case "dark": document.body.classList.add('dark'); break;
+        case "light": document.body.classList.remove('dark'); break;
+        default: if (mediaQuery) { document.body.classList.add('dark'); } break;
+    }
+</script>
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            <a class="navbar-brand primary-font text-wrap" href="{{ .Site.BaseURL | relURL }}">
+                {{ if .Site.Params.navbar.brandLogo }}
+                <img src="{{ .Site.Params.navbar.brandLogo | absURL }}" width="50" height="50" class="d-inline-block align-top">
+                {{ end }}
+                {{ .Site.Params.navbar.brandName }}
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg>
+            </button>
+
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                
+                <ul class="navbar-nav mx-auto text-center">
+                    {{ if .Site.Params.about.enable }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.Home.Permalink }}#about">{{ .Site.Params.about.title | default "About" }}</a>
+                    </li>
+                    {{ end }}
+                    {{ if .Site.Params.experience.enable }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.Home.Permalink }}#experience">{{ .Site.Params.experience.title | default "Experience" }}</a>
+                    </li>
+                    {{ end }}
+                    {{ if .Site.Params.education.enable }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.Home.Permalink }}#education">{{ .Site.Params.education.title | default "Education" }}</a>
+                    </li>
+                    {{ end }}
+                    {{ if .Site.Params.projects.enable }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.Home.Permalink }}#projects">{{ .Site.Params.projects.title | default "Projects" }}</a>
+                    </li>
+                    {{ end }}
+                    {{ if .Site.Params.contact.enable }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.Home.Permalink }}#contact">{{ .Site.Params.contact.title | default "Contact" }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+
+                <div class="ms-auto text-center d-flex align-items-center">
+                    
+                    {{/* --- DİL DEĞİŞTİRİCİ (LANGUAGE SWITCHER) - DOĞRU VE TAM KOD --- */}}
+                    {{ if hugo.IsMultilingual }}
+                      {{ $currentNode := . }}
+                      {{ range .Site.Languages }}
+                        {{ if ne .Lang $currentNode.Lang }}
+                          {{ $translation := where $currentNode.Translations "Lang" .Lang }}
+                          {{ with $translation }}
+                            {{ range . }}
+                              <div class="nav-item navbar-text">
+                                <a class="nav-link" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                              </div>
+                            {{ end }}
+                          {{ end }}
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+
+                    {{ if not .Site.Params.theme.disableThemeToggle }}
+                    <div class="nav-item navbar-text">
+                        <button id="theme-toggle" class="btn btn-sm" style="background: none; border: none;">
+                            <svg id="moon" xmlns="http://www.w.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                            <svg id="sun" xmlns="http://www.w.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    {{ end }}
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>

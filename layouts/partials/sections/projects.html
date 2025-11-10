@@ -1,0 +1,92 @@
+{{/* Projeler bölümü [params.projects] altında aktif mi diye kontrol ediyoruz */}}
+{{ $projects_section := .Site.Params.projects }}
+{{ if $projects_section.enable | default false }}
+<section id="projects" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ $projects_section.title | default "Öne Çıkan Projeler" }}</h3>
+        <div class="row justify-content-center px-3 px-md-5">
+
+            {{ $featured_projects := where .Site.Pages ".Params.featured" true }}
+
+            {{ range first 3 $featured_projects }}
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="{{ .Title }}">
+                    {{ if .Params.image }}
+                    <div class="card-head">
+                        {{ if .Params.video_file }}
+                        <video class="card-img-top project-video" 
+                               poster="{{ .Params.image | absURL }}" 
+                               playsinline muted loop preload="metadata">
+                            <source src="{{ .Params.video_file | absURL }}" type="video/mp4">
+                            Tarayıcınız video etiketini desteklemiyor.
+                        </video>
+                        {{ else }}
+                        <img class="card-img-top" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                    <div class="card-body bg-transparent p-3">
+                        {{ if .Params.badges }}
+                        <div class="pb-2 bg-transparent">
+                            {{ range .Params.badges }}
+                            <span class="badge badge-secondary">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                        <h5 class="card-title bg-transparent mt-1">{{ .Title }}</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            {{ .Params.summary | default .Summary }}
+                        </div>
+                    </div>
+                    <div class="card-footer py-3">
+                        <span class="float-end">
+                            <button type="button" class="btn-custom" data-bs-toggle="modal" data-bs-target="#project-modal-{{ .File.UniqueID }}">
+                                Detayları Gör
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            {{/* Her Proje Kartı İçin Gizli Modal (Açılır Pencere) Yapısı */}}
+            <div class="modal fade" id="project-modal-{{ .File.UniqueID }}" tabindex="-1" aria-labelledby="modal-label-{{ .File.UniqueID }}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-label-{{ .File.UniqueID }}">{{ .Title }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                        </div>
+                        <div class="modal-body">
+                            {{ .Content }}
+                        </div>
+                        {{/* -- DÜZENLENMİŞ MODAL FOOTER -- */}}
+                        <div class="modal-footer">
+<a href="{{ .RelPermalink }}" class="btn-custom">Tüm Detayları Oku &rarr;</a>
+</a>
+                        </div>
+                         {{/* -- BİTİŞ -- */}}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const projectCards = document.querySelectorAll('.project-video');
+    projectCards.forEach(video => {
+        const card = video.closest('.card');
+        if (card) {
+            card.addEventListener('mouseenter', () => {
+                video.play().catch(error => {});
+            });
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+            });
+        }
+    });
+});
+</script>
+
+{{ end }}
