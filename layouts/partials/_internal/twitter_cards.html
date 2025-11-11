@@ -1,0 +1,22 @@
+{{/* Bu dosya: layouts/partials/_internal/twitter_cards.html */}}
+{{/* Hugo'nun varsayılan Twitter Card şablonunu eziyoruz (override) */}}
+{{/* Bu şablon, 'og:' etiketlerini basmayacak, sadece Twitter etiketlerini basacaktır */}}
+{{/* Bu, 'og:' etiketlerinin 'opengraph.html' dosyamızdan gelmesini garantiler */}}
+
+{{ with .Site.Title }}
+<meta name="twitter:title" content="{{ . | plainify | htmlUnescape }}" />
+{{ end }}
+
+{{ with .Site.Language.Params.description }}
+<meta name="twitter:description" content="{{ . | plainify | htmlUnescape }}" />
+{{ end }}
+
+{{ with .Site.Language.Params.images }}
+  {{ $firstImage := (index . 0) }}
+  <meta name="twitter:image" content="{{ $firstImage | absURL }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+{{ else }}
+  <meta name="twitter:card" content="summary" />
+{{ end }}
+
+<meta name="twitter:site" content="@ErdincDincli" /> {{/* Buraya müşterinizin Twitter hesabını yazabilirsiniz (opsiyonel) */}}
