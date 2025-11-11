@@ -6,7 +6,8 @@
 <meta property="og:title" content="{{ .Site.Title }}" />
 
 {{/* 2. Açıklama (hugo.toml'daki [languages.tr.params.description] alanından) */}}
-{{ with .Site.Params.description }}
+{{/* DEĞİŞTİ: .Site.Params yerine .Site.Language.Params kullandık */}}
+{{ with .Site.Language.Params.description }}
 <meta property="og:description" content="{{ . }}" />
 {{ end }}
 
@@ -16,10 +17,8 @@
 <meta property="og:type" content="website" />
 
 {{/* 4. Resim (hugo.toml'daki [languages.tr.params.images] alanından) */}}
-{{/* Bu, "logo.png" hatasını düzeltecek ana kısımdır */}}
-{{ with .Site.Params.images }}
-  {{/* 'images' bir dizi olduğu için ilk öğeyi alıyoruz (first) */}}
+{{/* DEĞİŞTİ: .Site.Params yerine .Site.Language.Params kullandık */}}
+{{ with .Site.Language.Params.images }}
   {{ $firstImage := (index . 0) }}
-  {{/* 'absURL' ile tam yolu (https://...) oluşturuyoruz */}}
   <meta property="og:image" content="{{ $firstImage | absURL }}" />
 {{ end }}

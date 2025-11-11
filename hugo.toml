@@ -12,7 +12,7 @@ defaultContentLanguage = "tr"
     languageCode = "tr-tr"
     weight = 1
     # WHATSAPP'TA GÖRÜNECEK ANA BAŞLIK
-    title = "Erdinç Dinçli - Profesyonel Chef" 
+    title = "Erdinç Dinçli - Profesyonel Chef CV"
 
     [languages.tr.params]
       favicon = "/logo.png"
@@ -177,7 +177,7 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
     languageCode = "en-us"
     weight = 2
     # WHATSAPP'TA GÖRÜNECEK ANA BAŞLIK
-    title = "Erdinç Dinçli - Professional Chef" 
+    title = "Erdinç Dinçli - Professional Chef CV"
 
     [languages.en.params]
       favicon = "/logo.png"
