@@ -1,4 +1,4 @@
-# --- TEMEL HUGO AYARLARI ---
+# --- TEMEL HUGO AYARLARI (TEMİZLENMİŞ) ---
 baseURL = "https://www.erdincdincli.com/"
 theme = "profile"
 defaultContentLanguage = "tr"
@@ -11,11 +11,14 @@ defaultContentLanguage = "tr"
     languageName = "Türkçe"
     languageCode = "tr-tr"
     weight = 1
-    title = "Erdinç Dincli"
+    # DÜZELTME 1: WhatsApp'ta görünecek ana başlık
+    title = "Erdinç Dinçli - Profesyonel Chef" 
 
     [languages.tr.params]
       favicon = "/logo.png"
+      # DÜZELTME 2: Sizin eklediğiniz doğru 'description'
       description = "Chef Erdinç Dinçli'nin yeteneklerini ve deneyimlerini sergilediği kişisel CV sitesi. 5 yıldızlı otel mutfaklarına uzanan kariyerimi inceleyin."
+      
       [languages.tr.params.social]
         email = "Erdinc.dincli@hotmail.com"
       [languages.tr.params.theme]
@@ -36,12 +39,14 @@ defaultContentLanguage = "tr"
         fontSize = "1rem"
         fontWeight = "700"
         lineHeight = "1.6"
+      
+      # --- İÇERİK BÖLÜMLERİ ---
       [languages.tr.params.hero]
         enable = true
         intro = "Merhaba, ben"
         title = "Erdinç Dinçli"
         content = """Yeteneklerimi ve deneyimlerimi sergilediğim kişisel CV siteme hoş geldiniz. 
-        Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi edinebilirsiniz."""
+Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi edinebilirsiniz."""
         image = "images/ben_karsilama.jpg"
         roundImage = false
         [languages.tr.params.hero.button]
@@ -57,13 +62,15 @@ defaultContentLanguage = "tr"
           [[languages.tr.params.hero.socialLinks.fontAwesomeIcons]]
             url = "mailto:Erdinc.dincli@hotmail.com"
             icon = "fas fa-envelope"
+      
       [languages.tr.params.about]
         enable = true
         title = "Hakkımda"
         content = """
-Aileden  gelen köklü gastronomi sevgisi ve disiplini ile büyümüş 2006 yılından itibaren profesyonel olarak mutfak hayatı maceram başlamıştır. Chef Dinçli Çeşitli lüx Restaurant’larda ve farklı ülkelerde 5 yıldızlı otel mutfaklarına uzanan bir kariyere sahibimdir. Mutfakta yarattığım lezzetlerle sadece damaklara değil, kalplere de dokunan bir isim haline gelmekteyim
-Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dönüşmüştür. Yerel tatlara duyduğum saygı ve modern mutfak tekniklerine olan ilgim, klasik tarifleri günümüz mutfağına yeniden yorumlayan ve dizayn eden bir Şef kişiliğine sahibimdir. Her tabağımda  yalnızca  damaklara değil, hafızalara da dokunan tatlar yaratırken, mutfağın  bir üretim alanı olmaktan öte, bir sanat atölyesi olarak görüyorum, benim  için mutfak, sınırların kalktığı, yaratıcılığın özgürleştiği bir sahnedir. Chef Dinçli olarak sadece yemek yapan bir şef değil; aynı zamanda misafir memnuniyetini en değerli Reçete olarak kabul ediyorum; Bugün ise 5 yıldızlı otellerde Chef’lik kariyerimi sürdürerek, mutfak sanatındaki kariyer yolculuğuma yeni başarılarıma her geçen zaman zarfı içinde  bir yenisini ekleyerek devam etmekteyim
+Aileden gelen köklü gastronomi sevgisi ve disiplini ile büyümüş 2006 yılından itibaren profesyonel olarak mutfak hayatı maceram başlamıştır. Chef Dinçli Çeşitli lüx Restaurant’larda ve farklı ülkelerde 5 yıldızlı otel mutfaklarına uzanan bir kariyere sahibimdir. Mutfakta yarattığım lezzetlerle sadece damaklara değil, kalplere de dokunan bir isim haline gelmekteyim
+Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dönüşmüştür. Yerel tatlara duyduğum saygı ve modern mutfak tekniklerine olan ilgim, klasik tarifleri günümüz mutfağına yeniden yorumlayan ve dizayn eden bir Şef kişiliğine sahibimdir. Her tabağımda yalnızca damaklara değil, hafızalara da dokunan tatlar yaratırken, mutfağın bir üretim alanı olmaktan öte, bir sanat atölyesi olarak görüyorum, benim için mutfak, sınırların kalktığı, yaratıcılığın özgürleştiği bir sahnedir. Chef Dinçli olarak sadece yemek yapan bir şef değil; aynı zamanda misafir memnuniyetini en değerli Reçete olarak kabul ediyorum; Bugün ise 5 yıldızlı otellerde Chef’lik kariyerimi sürdürerek, mutfak sanatındaki kariyer yolculuğuma yeni başarılarıma her geçen zaman zarfı içinde bir yenisini ekleyerek devam etmekteyim
         """
+      
       [languages.tr.params.experience]
         enable = true
         title = "İş Deneyimlerim"
@@ -77,47 +84,48 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
           date = "Mayıs 2008 - Eylül 2008"
           content = "Pozisyon: A’la Carte Commis"
           info = { content = "Günlük 80 İla 110 Misafir Portföyü Olan Dönemin Ankara’da Faliyet Gösteren Bakanların Ve İş İnsanlarını Ağırlandığı Balık Restoranda görev almaktaydım"}
-     [[languages.tr.params.experience.items]]
+        [[languages.tr.params.experience.items]]
           company = "LIMAK AMBASSADOR HOTEL ANKARA"
           date = "Eylül 2008 - Ekim 2009"
           content = "Pozisyon: A’la Carte Commis"
           info = { content = "Mutfak Commis Olarak Görev Almakta olduğum Limak Ambassador A’la Carte Commis ve Soğuk Bölümünde Görev Aldım"}
-    [[languages.tr.params.experience.items]]
+        [[languages.tr.params.experience.items]]
           company = "PARK BULVAR RESTAURANT & CAFE ANKARA"
           date = "Aralık 2009 - Haziran 2010"
           content = "Pozisyon: Demi Chef"
           info = { content = "O dönemki Ankara Piyasasında İsim Yapmış A’la Carte ’de günlük 220 ila 300 kişi misafir portföyü olan Sunum, görsel, Tat İle isminden Söz ettiren Restaurant da Demi Chef olarak görev aldım Dünya mutfağına önem veren kullanılmakta olan tüm ürünleri Fresh servis edilen bilgi, beceri ve görsel açıdan Misafir portföyü ve memnuniyeti üst düzey mekanda görev almaktaydım"}
-     [[languages.tr.params.experience.items]]
+        [[languages.tr.params.experience.items]]
           company = "CRATOS PREMIUM HOTEL & CASINO & PORT & SPA"
           date = "Temmuz 2010 - Mayıs 2011"
           content = "Pozisyon: A’la Carte Demi Chef"
           info = { content = " Günlük 100 ile 120 arası değişen sayılarda misafir ağırlayan İspanyol mutfağında Mr. Paella markası İle Chef Fabrice Canelle ile çalışmaktaydım"}
-               [[languages.tr.params.experience.items]]
+        [[languages.tr.params.experience.items]]
           company = "GOLDEN TULIP HOTEL & CASINO KIBRIS "
           date = "Ocak 2011 - Aralık 2012"
           content = "Pozisyon: Ass. A’la Carte Chef De Party"
-           info = { content = "Mutfak departmanına ait menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar, mal kabul, mc programı"} 
-               [[languages.tr.params.experience.items]]
+          info = { content = "Mutfak departmanına ait menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar, mal kabul, mc programı"} 
+        [[languages.tr.params.experience.items]]
           company = "RADISSON BLU AL-MAHARY HOTEL TRIPOLI / LIBYA "
           date = "Aralık 2012 - Haziran 2013"
           content = "Pozisyon: A’la Carte Chef De Party"
           info = { content = "Günlük 80-110 kuver misafir ağırlayan restoranın kısım şefi olarak görev yaptım. Menü çalışmaları, reçete çalışmaları, satın alma departmanı aracılığıyla kontak firmalardan taze balık ve et alım ve kontrolü, sürekli gelişen ve geliştiren bir tutum ile ekip çalışmaları ve eğitimleri."}
-      [[languages.tr.params.experience.items]]
+        [[languages.tr.params.experience.items]]
           company = "GRAND PASHA LEFKOŞA HOTEL & CASINO KIBRIS"
           date = "Temmuz 2013 - Ocak 2018"
           content = "Pozisyon: Jr.Sous chef"
-          info = { content = "  Mutfak departmanına ait menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar, mal kabul, mc programı üzerinden satın alma malzeme talepleri ve giriş çıkışlar, personel eğitimleri, gıda güvenliği ve sağlanması üzerine kalite departmanıyla kontak çalışmalar ve personel eğitimleri, üçüncü bir göz olan deversey denetim kontrolleri, kontak departman olan muhasebe satın alma f&b teknik ile ortak çalışmalar. 2013 Yılında A’la Carte Chef De Party Olarak Görev Aldım 2014 Aralık Ayında Chef Tournant Chef Görevine Terfi Aldım 2017 Ocak Ayında Jr. Sous Chef Olarak terfi aldım Görevime Devam Ettim "}
-[[languages.tr.params.experience.items]]
+          info = { content = " Mutfak departmanına ait menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar, mal kabul, mc programı üzerinden satın alma malzeme talepleri ve giriş çıkışlar, personel eğitimleri, gıda güvenliği ve sağlanması üzerine kalite departmanıyla kontak çalışmalar ve personel eğitimleri, üçüncü bir göz olan deversey denetim kontrolleri, kontak departman olan muhasebe satın alma f&b teknik ile ortak çalışmalar. 2013 Yılında A’la Carte Chef De Party Olarak Görev Aldım 2014 Aralık Ayında Chef Tournant Chef Görevine Terfi Aldım 2017 Ocak Ayında Jr. Sous Chef Olarak terfi aldım Görevime Devam Ettim "}
+        [[languages.tr.params.experience.items]]
           company = "ELEXUS HOTEL & SPA & CASINO KIBRIS"
           date = "Ocak 2018 - Mayıs 2024"
           content = "Pozisyon: Sous Chef"
           info = { content = " Genel mutfak menü çalışmaları, reçete çalışmaları, mc üzerinden satın alma malzeme talepleri ve giriş çıkışlar. Event order planlama aksiyon alımı ve tüketim planlaması. Personel eğitimleri, gıda güvenliğinin sağlanması açısından kalite departmanı ile kontak çalışma ve aksiyonlarının alınması. 2018 yılında başlamış olduğum Elexus Hotel & Casino da A’la Carte den Sorumlu Chef de Cuisine olarak göreve başladım 2020 Yılında Genel Sous Chef Olarak Terfi Alıp Görevime Devam Ettim"}
-            [[languages.tr.params.experience.items]]
+        [[languages.tr.params.experience.items]]
           company = "MERİT ROYAL PREMİUM HOTEL KIBRIS"
           date = "Mayıs 2024- Aktif Çalışıyor"
           content = "Pozisyon: Sous Chef"
           info = { content = "Genel mutfaklarda menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar chetna programı üzerinden talep giriş çıkışları, personel eğitimleri, satın alma departmanı ile kontak çalışmalar, kalite departmanı ile kontak çalışmalar"}
-       [languages.tr.params.education] 
+      
+      [languages.tr.params.education] 
         enable = true
         title = "Eğitim Belgeleri/Kurs/Sertifika"
         index = false
@@ -139,19 +147,19 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
         [[languages.tr.params.education.items]]
           date = "12.03.2017"
           title = "Düşünsel Gelecek Tasarımı ve Başarı - Aşkım Kapışmak Eğitim Danış. "
-                  [[languages.tr.params.education.items]]
+        [[languages.tr.params.education.items]]
           date = "12.03.2017"
           title = "Problem Çözme Tekn. ve Düşünce Gücü - Aşkım Kapışmak Eğitim Danış. "
-                  [[languages.tr.params.education.items]]
+        [[languages.tr.params.education.items]]
           date = "12.03.2017"
           title = "İnsan Tanıma Yöntemleri ve Zihin - Aşkım Kapışmak Eğitim Danış."
-                  [[languages.tr.params.education.items]]
+        [[languages.tr.params.education.items]]
           date = "06.05.2014"
           title = "ISO 22000 Gıda Güvenliği Eğitimi – Golden Tulip Otel "
-                  [[languages.tr.params.education.items]]
+        [[languages.tr.params.education.items]]
           date = "06.05.2011"
           title = "SO 9001 – Temel Kalite Yönetimi Eğitimi – Golden Tulip Otel"
-
+      
       [languages.tr.params.contact]
         enable = true
         title = "İletişime Geçin"
@@ -166,11 +174,14 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
     languageName = "English"
     languageCode = "en-us"
     weight = 2
-    title = "Erdinç Dincli" # Sitenin İngilizce başlığı
-
+    # DÜZELTME 1: WhatsApp'ta görünecek ana başlık
+    title = "Erdinç Dinçli - Professional Chef" 
+    
     [languages.en.params]
       favicon = "/logo.png"
+      # DÜZELTME 2: Sizin eklediğiniz doğru 'description'
       description = "Chef Erdinç Dinçli's personal CV site, showcasing his talents and experience. Check out my career that extends to 5-star hotel kitchens."
+      
       [languages.en.params.social]
         email = "Erdinc.dincli@hotmail.com"
       [languages.en.params.theme]
@@ -183,7 +194,7 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
         align = "mx-auto"
         disableSearch = true
         brandLogo = "/logo.png"
-        brandName = ""
+        brandname = ""
       [languages.en.params.font]
         fontSize = "1rem"
         fontWeight = "700"
@@ -199,7 +210,7 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
         [languages.en.params.hero.button]
           enable = true
           name = "View CV"
-          url = "/erdinc_dincli_cv.pdf" # Erdinç Bey'in CV'si ile güncellenmeli
+          url = "/erdinc_dincli_cv.pdf"
           newPage = true
           download = false
         [languages.en.params.hero.socialLinks]
