@@ -1,0 +1,25 @@
+{{/* Bu dosya: layouts/partials/_internal/opengraph.html */}}
+{{/* Hugo'nun varsayılan Open Graph şablonunu eziyoruz (override) */}}
+{{/* Bu şablon, verileri DOĞRUDAN 'hugo.toml' dosyasından okuyacaktır */}}
+
+{{/* 1. Ana Site Başlığı (hugo.toml'daki [languages.tr.title] alanından) */}}
+<meta property="og:title" content="{{ .Site.Title }}" />
+
+{{/* 2. Açıklama (hugo.toml'daki [languages.tr.params.description] alanından) */}}
+{{ with .Site.Params.description }}
+<meta property="og:description" content="{{ . }}" />
+{{ end }}
+
+{{/* 3. URL (Her zaman sitenin ana URL'si) */}}
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+
+{{/* 4. Resim (hugo.toml'daki [languages.tr.params.images] alanından) */}}
+{{/* Bu, "logo.png" hatasını düzeltecek ana kısımdır */}}
+{{ with .Site.Params.images }}
+  {{/* 'images' bir dizi olduğu için ilk öğeyi alıyoruz (first) */}}
+  {{ $firstImage := (index . 0) }}
+  {{/* 'absURL' ile tam yolu (https://...) oluşturuyoruz */}}
+  <meta property="og:image" content="{{ $firstImage | absURL }}" />
+{{ end }}
