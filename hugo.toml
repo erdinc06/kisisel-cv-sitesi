@@ -11,16 +11,16 @@ defaultContentLanguage = "tr"
     languageName = "Türkçe"
     languageCode = "tr-tr"
     weight = 1
-    # DÜZELTME 1: WhatsApp'ta görünecek ana başlık
-    title = "Erdinç Dinçli - Profesyonel Chef"
+    # WHATSAPP'TA GÖRÜNECEK ANA BAŞLIK
+    title = "Erdinç Dinçli - Profesyonel Chef" 
 
     [languages.tr.params]
       favicon = "/logo.png"
-      # DÜZELTME 2: WhatsApp'ta görünecek açıklama
+      # WHATSAPP'TA GÖRÜNECEK AÇIKLAMA
       description = "Chef Erdinç Dinçli'nin yeteneklerini ve deneyimlerini sergilediği kişisel CV sitesi. 5 yıldızlı otel mutfaklarına uzanan kariyerimi inceleyin."
-      # DÜZELTME 3: WhatsApp'ta görünecek resim (logo.png yerine)
+      # WHATSAPP'TA GÖRÜNECEK RESİM (Başına / eklendi)
       images = ["/images/ben_karsilama.jpg"]
-      
+
       [languages.tr.params.social]
         email = "Erdinc.dincli@hotmail.com"
       [languages.tr.params.theme]
@@ -41,7 +41,7 @@ defaultContentLanguage = "tr"
         fontSize = "1rem"
         fontWeight = "700"
         lineHeight = "1.6"
-      
+
       # --- İÇERİK BÖLÜMLERİ ---
       [languages.tr.params.hero]
         enable = true
@@ -64,7 +64,7 @@ Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi
           [[languages.tr.params.hero.socialLinks.fontAwesomeIcons]]
             url = "mailto:Erdinc.dincli@hotmail.com"
             icon = "fas fa-envelope"
-      
+
       [languages.tr.params.about]
         enable = true
         title = "Hakkımda"
@@ -72,7 +72,7 @@ Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi
 Aileden gelen köklü gastronomi sevgisi ve disiplini ile büyümüş 2006 yılından itibaren profesyonel olarak mutfak hayatı maceram başlamıştır. Chef Dinçli Çeşitli lüx Restaurant’larda ve farklı ülkelerde 5 yıldızlı otel mutfaklarına uzanan bir kariyere sahibimdir. Mutfakta yarattığım lezzetlerle sadece damaklara değil, kalplere de dokunan bir isim haline gelmekteyim
 Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dönüşmüştür. Yerel tatlara duyduğum saygı ve modern mutfak tekniklerine olan ilgim, klasik tarifleri günümüz mutfağına yeniden yorumlayan ve dizayn eden bir Şef kişiliğine sahibimdir. Her tabağımda yalnızca damaklara değil, hafızalara da dokunan tatlar yaratırken, mutfağın bir üretim alanı olmaktan öte, bir sanat atölyesi olarak görüyorum, benim için mutfak, sınırların kalktığı, yaratıcılığın özgürleştiği bir sahnedir. Chef Dinçli olarak sadece yemek yapan bir şef değil; aynı zamanda misafir memnuniyetini en değerli Reçete olarak kabul ediyorum; Bugün ise 5 yıldızlı otellerde Chef’lik kariyerimi sürdürerek, mutfak sanatındaki kariyer yolculuğuma yeni başarılarıma her geçen zaman zarfı içinde bir yenisini ekleyerek devam etmekteyim
         """
-      
+
       [languages.tr.params.experience]
         enable = true
         title = "İş Deneyimlerim"
@@ -126,7 +126,7 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
           date = "Mayıs 2024- Aktif Çalışıyor"
           content = "Pozisyon: Sous Chef"
           info = { content = "Genel mutfaklarda menü çalışmaları, reçete çalışmaları, capex çalışmaları, opex çalışmaları, tedarikçi firmalar ile kontak çalışmalar chetna programı üzerinden talep giriş çıkışları, personel eğitimleri, satın alma departmanı ile kontak çalışmalar, kalite departmanı ile kontak çalışmalar"}
-      
+
       [languages.tr.params.education] 
         enable = true
         title = "Eğitim Belgeleri/Kurs/Sertifika"
@@ -161,7 +161,7 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
         [[languages.tr.params.education.items]]
           date = "06.05.2011"
           title = "SO 9001 – Temel Kalite Yönetimi Eğitimi – Golden Tulip Otel"
-      
+
       [languages.tr.params.contact]
         enable = true
         title = "İletişime Geçin"
@@ -176,16 +176,16 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
     languageName = "English"
     languageCode = "en-us"
     weight = 2
-    # DÜZELTME 1: WhatsApp'ta görünecek ana başlık
+    # WHATSAPP'TA GÖRÜNECEK ANA BAŞLIK
     title = "Erdinç Dinçli - Professional Chef" 
-    
+
     [languages.en.params]
       favicon = "/logo.png"
-      # DÜZELTME 2: WhatsApp'ta görünecek açıklama
+      # WHATSAPP'TA GÖRÜNECEK AÇIKLAMA
       description = "Chef Erdinç Dinçli's personal CV site showcasing skills and experience. Explore my career spanning 5-star hotel kitchens."
-      # DÜZELTME 3: WhatsApp'ta görünecek resim (logo.png yerine)
+      # WHATSAPP'TA GÖRÜNECEK RESİM (Başına / eklendi)
       images = ["/images/ben_karsilama.jpg"]
-      
+
       [languages.en.params.social]
         email = "Erdinc.dincli@hotmail.com"
       [languages.en.params.theme]
@@ -325,12 +325,6 @@ My interest in cooking, which started at a young age, transformed into a profess
       [languages.en.params.projects]
         enable = false # Projeler bölümü şimdilik kapalı
         title = "Projects"
-      
+
       [languages.en.params.contact]
         enable = true
-        title = "Get in Touch"
-        content = "If you want to talk about a project, ask a question, or just say hello, you can send me an email by clicking the button below."
-        email = "Erdinc.dincli@hotmail.com"
-        btnName = "Send E-mail"
-        [languages.en.params.contact.formspree]
-          enable = false
