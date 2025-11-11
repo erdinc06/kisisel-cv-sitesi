@@ -1,4 +1,4 @@
-# --- TEMEL HUGO AYARLARI (TEMİZLENMİŞ) ---
+# --- TEMEL HUGO AYARLARI (NİHAİ TEMİZLENMİŞ KOD) ---
 baseURL = "https://www.erdincdincli.com/"
 theme = "profile"
 defaultContentLanguage = "tr"
@@ -12,12 +12,14 @@ defaultContentLanguage = "tr"
     languageCode = "tr-tr"
     weight = 1
     # DÜZELTME 1: WhatsApp'ta görünecek ana başlık
-    title = "Erdinç Dinçli - Profesyonel Chef" 
+    title = "Erdinç Dinçli - Profesyonel Chef"
 
     [languages.tr.params]
       favicon = "/logo.png"
-      # DÜZELTME 2: Sizin eklediğiniz doğru 'description'
+      # DÜZELTME 2: WhatsApp'ta görünecek açıklama
       description = "Chef Erdinç Dinçli'nin yeteneklerini ve deneyimlerini sergilediği kişisel CV sitesi. 5 yıldızlı otel mutfaklarına uzanan kariyerimi inceleyin."
+      # DÜZELTME 3: WhatsApp'ta görünecek resim (logo.png yerine)
+      images = ["/images/ben_karsilama.jpg"]
       
       [languages.tr.params.social]
         email = "Erdinc.dincli@hotmail.com"
@@ -179,8 +181,10 @@ Küçük yaşlarda başlayan yemek merakım,zamanla profesyonel bir kimliğe dö
     
     [languages.en.params]
       favicon = "/logo.png"
-      # DÜZELTME 2: Sizin eklediğiniz doğru 'description'
-      description = "Chef Erdinç Dinçli's personal CV site, showcasing his talents and experience. Check out my career that extends to 5-star hotel kitchens."
+      # DÜZELTME 2: WhatsApp'ta görünecek açıklama
+      description = "Chef Erdinç Dinçli's personal CV site showcasing skills and experience. Explore my career spanning 5-star hotel kitchens."
+      # DÜZELTME 3: WhatsApp'ta görünecek resim (logo.png yerine)
+      images = ["/images/ben_karsilama.jpg"]
       
       [languages.en.params.social]
         email = "Erdinc.dincli@hotmail.com"
