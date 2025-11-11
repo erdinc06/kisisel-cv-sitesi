@@ -328,3 +328,9 @@ My interest in cooking, which started at a young age, transformed into a profess
 
       [languages.en.params.contact]
         enable = true
+        title = "Get in Touch"
+        content = "If you want to talk about a project, ask a question, or just say hello, you can send me an email by clicking the button below."
+        email = "Erdinc.dincli@hotmail.com"
+        btnName = "Send E-mail"
+        [languages.en.params.contact.formspree]
+          enable = false
